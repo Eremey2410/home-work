@@ -103,29 +103,28 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-.header-contact {
+
+.icon-envelope {
   display: inline-flex;
   align-items: center;
 }
-
-.icon-envelope::before {
-  content: '';
+.header-icon-envelope {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../images/envelope\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  fill: currentColor;
 }
-.icon-smartphone::before {
-  content: '';
+.icon-smartphone {
+  display: inline-flex;
+  align-items: center;
+}
+.header-icon-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  background-image: url(../images/smartphone\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  fill: currentColor;
 }
+
 .footer-contact {
   font-style: normal;
   font-weight: 400;
