@@ -47,6 +47,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* header */
 
 .header {
@@ -94,14 +95,22 @@ body {
 .header-nav-link:focus {
   color: var(--accent-color);
 }
+
 /* contact */
+
 .header-contact {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  fill: #757575;
+}
+.header-contact-icon {
+  margin-right: 10px;
 }
 .footer-contact {
   font-style: normal;
@@ -116,7 +125,9 @@ body {
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--accent-color);
+  fill: currentColor;
 }
+
 /* section hero*/
 
 .hero {
@@ -181,6 +192,7 @@ body {
 }
 
 /* section features */
+
 .features {
   margin-top: 0;
   margin-bottom: 0;
@@ -384,6 +396,7 @@ body {
 }
 
 /* section progect */
+
 .progect-list {
   display: flex;
   flex-wrap: wrap;
