@@ -1,0 +1,116 @@
+.hero {
+  @include padding-section(118px, 60px);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f303a;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-mobile.jpg);
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      url(../images/hero-mobile@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-mobile@2x.jpg);
+  }
+  @include tablet {
+    max-width: 768px;
+    @include padding-section(118px, 204px);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      url(../images/hero-tablet.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-tablet.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(rgba(47, 48, 58, 0.4)),
+          to(rgba(47, 48, 58, 0.4))
+        ),
+        url(../images/hero-tablet@2x.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tablet@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    max-width: 1600px;
+    @include padding-section(200px, 200px);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(47, 48, 58, 0.4)),
+        to(rgba(47, 48, 58, 0.4))
+      ),
+      url(../images/hero-desctop.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-desctop.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(rgba(47, 48, 58, 0.4)),
+          to(rgba(47, 48, 58, 0.4))
+        ),
+        url(../images/hero-desctop@2x.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-desctop@2x.jpg);
+    }
+  }
+
+  &__container {
+    padding: 0;
+    width: auto;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include fonts(900, 44px, 1.4, 0.06em);
+    text-transform: uppercase;
+    color: $accent-white-color;
+    @include tablet-max {
+      @include fonts(null, 26px, 1.62, null);
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    @include fonts(700, 16px, 1.9, 0.06em);
+    cursor: pointer;
+    
+    background-color: $accent-color;
+    color: $accent-white-color;
+  }
+  &__btn:hover,
+  &__btn:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

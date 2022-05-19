@@ -1,0 +1,46 @@
+.work {
+  @include tablet-max {
+    display: none;
+  }
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @include padding-section(94px, 94px);
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    @include fonts(700, 36px, 1.17, null);
+
+    color: $title-text-color;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__img {
+    display: block;
+  }
+  &__text {
+    position: absolute;
+    transform: translateY(-100%);
+
+    @include centeredFlex;
+    margin: 0;
+    width: 370px;
+    height: 70px;
+    text-align: center;
+    @include fonts(700, 14px, 1.14, null);
+    text-transform: uppercase;
+
+    background: rgba(47, 48, 58, 0.8);
+    color: $accent-white-color;
+  }
+}

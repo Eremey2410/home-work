@@ -1,0 +1,190 @@
+.footer {
+  @include padding-section(60px, 60px);
+  background-color: #2f303a;
+  @include tablet-max {
+    text-align: center;
+  }
+  &__logotype {
+    @extend %link;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-family: Raleway;
+    @include fonts(700, 26px, 1.2, null);
+    color: #ffffff;
+  }
+  &__logotype:hover,
+  &__logotype:focus {
+    color: $accent-color;
+  }
+  &__logo {
+    color: $accent-color;
+  }
+  &__contact {
+    @extend %link;
+    @include fonts(null, 14px, 1.7, null);
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms $timing-function;
+  }
+  &__contact:hover,
+  &__contact:focus {
+    color: $accent-color;
+    fill: currentColor;
+  }
+  &__list {
+    @extend %list;
+    margin: 0;
+    padding-left: 0;
+  }
+  &__item {
+    margin-top: 9px;
+    margin-bottom: 0;
+  }
+  &__general {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    @include desctop {
+      flex-wrap: nowrap;
+    }
+  }
+  &__social-box {
+    margin-left: 70px;
+    @include mobile-max {
+      margin-top: 60px;
+      margin-left: 0;
+    }
+    @include tablet-desctop {
+      text-align: center;
+    }
+  }
+  &__adress {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-style: normal;
+    @include fonts(null, 14px, 1.7, null);
+    color: $accent-white-color;
+  }
+  &__box {
+    @include tablet-desctop {
+      text-align: center;
+    }
+  }
+}
+.social-box {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include fonts(700, 14px, 1.14, null);
+    text-transform: uppercase;
+    color: $accent-white-color;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    @include mobile-max {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
+  }
+  &__item + &__item {
+    margin-left: 10px;
+  }
+  &__link {
+    @extend %link;
+    @include centeredFlex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    fill: $accent-white-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms $timing-function;
+  }
+  &__link:hover,
+  &__link:focus {
+    border-radius: 50%;
+
+    background-color: $accent-color;
+    fill: $accent-white-color;
+  }
+}
+.send {
+  margin-left: 93px;
+  @include mobile-max {
+    margin-left: 0;
+  }
+  @include tablet-desctop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include fonts(700, 14px, 1.14, null);
+    text-transform: uppercase;
+
+    color: $accent-white-color;
+    @include tablet-desctop {
+      margin-top: 60px;
+    }
+  }
+  &__mail {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    cursor: pointer;
+
+    color: #afb1b8;
+    background-color: transparent;
+    @include mobile-max {
+      width: 100%;
+    }
+    @include tablet-desctop {
+      width: 450px;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+
+    margin-left: 12px;
+    padding-left: 29px;
+    padding-right: 0;
+    @include fonts(700, 16px, 1.88, 0.06em);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    color: $accent-white-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    @include tablet-max {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+  &__icon {
+    margin-left: 10px;
+    margin-right: 28px;
+    fill: currentColor;
+  }
+}
+.sends {
+  @include desctop {
+    display: flex;
+  }
+}
